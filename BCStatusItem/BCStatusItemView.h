@@ -22,9 +22,6 @@
 	NSStatusItem *parentStatusItem;
 	NSMenu *menu;
 	
-	BOOL highlighted;
-	BOOL doesHighlight;
-	
 	NSImage *image;
 	NSImage *alternateImage;
 	NSString *title;
@@ -33,6 +30,7 @@
 	id<BCStatusItemViewDelegate> delegate;
 }
 
+@property (nonatomic, assign) BOOL highlighted;
 @property (assign, nonatomic) BOOL doesHighlight;
 @property (copy, nonatomic) NSString *title;
 @property (copy, nonatomic) NSAttributedString *attributedTitle;

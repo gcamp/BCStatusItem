@@ -14,13 +14,8 @@
 
 @implementation BCStatusItemView
 
-@synthesize doesHighlight;
-@synthesize title;
-@synthesize attributedTitle;
-@synthesize image;
-@synthesize alternateImage;
-@synthesize delegate;
-@synthesize enabled;
+@synthesize doesHighlight, delegate, enabled, highlighted;
+@synthesize title, attributedTitle, image, alternateImage;
 
 + (BCStatusItemView *)viewWithStatusItem:(NSStatusItem *)statusItem
 {
