@@ -17,6 +17,7 @@
  * Call this after you do any of these: setImage, setAlternateImage, setTitle, setAttributedTitle, setHighlightMode
  */
 - (void)setupView;
+- (void)setupViewWithClass:(Class)viewClass; //Must be a subclass of BCStatusItemView
 
 - (void)setAllowsDragging:(BOOL)dragging;
 - (void)setDraggingTypes:(NSArray *)types;

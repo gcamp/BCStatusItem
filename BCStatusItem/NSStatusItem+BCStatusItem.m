@@ -16,14 +16,13 @@
 
 @implementation NSStatusItem(BCStatusItem)
 
-- (void)setupView
-{
-	BCStatusItemView *view = [BCStatusItemView viewWithStatusItem:self];
-//	// grab the statu item's various vars that get cleared upon setView:
-//	[view setImage:[self image]];
-//	[view setAlternateImage:[self alternateImage]];
-//	[view setAttributedTitle:[self attributedTitle]];
-//	[view setDoesHighlight:[self highlightMode]];
+- (void)setupView {
+    [self setupViewWithClass:[BCStatusItemView class]];
+}
+
+- (void)setupViewWithClass:(Class)viewClass {
+    BCStatusItemView *view = [viewClass viewWithStatusItem:self];
+    
 	[self setView:view];
 	
 	// view becomes delegate for highlighting purposes, this isn't ideal for all cases
